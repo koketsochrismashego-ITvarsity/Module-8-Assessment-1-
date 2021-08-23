@@ -6,8 +6,8 @@
         <p>Welcome. Please log in</p>
 
         <form>
-            <label for="usernameInput">Username:</label><input type="text" id="usernameInput"/><br/>
-            <label for="passwordInput">Password:</label><input type="password" id="passwordInput"/>
+            <label for="usernameInput">Username: </label><input type="text" id="usernameInput"/><br/>
+            <label for="passwordInput">Password: </label><input type="password" id="passwordInput"/>
             <p id="message"></p>
             <br/><br/>
             <a href="#" onclick="verifyUser()">Log in</a>
@@ -17,7 +17,7 @@
 
             function verifyUser(){
                 var username = document.getElementById("usernameInput").value;
-                var username = document.getElementById("passswordInput").value;
+                var password = document.getElementById("passwordInput").value;
                 
                 checkUserCreds(username, password);
             }
@@ -27,9 +27,9 @@
                 var systemPassword = "007";
 
                 if(username == systemUsername && password == systemPassword){
-                    document.getElementById("message").innerHTML = "Correct. Logging you in...;"
+                    document.getElementById("message").innerHTML = "Correct. Logging you in...";
                 } else {
-                    document.getElementById("message").innerHTML = "Username or password are incorrect;"
+                    document.getElementById("message").innerHTML = "Username or password are incorrect";
                 }
             }
         </script>
